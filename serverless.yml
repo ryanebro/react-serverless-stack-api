@@ -1,6 +1,7 @@
 service: notes-app-api
 
 # Create an optimized package for our functions
+# Serverless Framework converts your serverless.yml into a CloudFormation template.
 package:
   individually: true
 

@@ -11,12 +11,14 @@ export const main = handler(async (event, context) => {
     //             Cognito Identity Pool, we will use the identity id
     //             as the user id of the authenticated user
     // - 'noteId': a unique uuid
+    // - 'title': note title
     // - 'content': parsed from request body
     // - 'attachment': parsed from request body
     // - 'createdAt': current Unix timestamp
     Item: {
       userId: event.requestContext.identity.cognitoIdentityId,
       noteId: uuid.v1(),
+      title: data.title,
       content: data.content,
       attachment: data.attachment,
       createdAt: Date.now()
